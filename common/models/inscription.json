@@ -1,0 +1,39 @@
+{
+  "name": "Inscription",
+  "plural": "inscriptions",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "nom": {
+      "type": "string"
+    },
+    "prenom": {
+      "type": "string"
+    },
+    "adresse": {
+      "type": "string"
+    },
+    "telephone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "ecole": {
+      "type": "object"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "ecole": {
+      "type": "belongsTo",
+      "model": "Ecole",
+      "foreignKey": "ecoleId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
